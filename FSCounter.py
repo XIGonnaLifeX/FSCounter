@@ -1,4 +1,6 @@
 from colorama.ansi import clear_screen
+import os
+os.system('clear')
 clear_screen
 from colorama import Fore
 print(Fore.RED)
