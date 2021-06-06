@@ -2,11 +2,12 @@ from colorama.ansi import clear_screen
 import os
 os.system('clear')
 clear_screen
-from colorama import Fore
-print(Fore.RED)
-os.system("figlet 'FSCounter'")
-print('_________________________________________________________________')
-print(Fore.WHITE)
+from colorama import Fore, Back
+print(Fore.RED, Back.LIGHTBLUE_EX)
+os.system("figlet -f smslant 'FSCounter'")
+print('___________________________________________')
+print('--------------------')
+print(Fore.WHITE, Back.RESET)
 print('Привет эта программа поможет посчитать необходимое кол-во слитков на изготовление какого-либо предмета в FS...')
 print(Fore.LIGHTGREEN_EX)
 print('Что изготавливаем?')
