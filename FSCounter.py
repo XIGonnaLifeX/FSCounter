@@ -3,7 +3,7 @@ import os
 os.system('clear')
 clear_screen
 from colorama import Fore, Back
-print(Fore.BLUE, Back.LIGHTRED_EX)
+print(Fore.GREEN, Back.LIGHTBLUE_EX)
 os.system("figlet -f smslant 'FSCounter'")
 print('__________________________________________' + Back.RESET, Fore.WHITE)
 print('Привет эта программа поможет посчитать необходимое кол-во слитков на изготовление какого-либо предмета в FS...')
@@ -102,9 +102,9 @@ if choise == 7 :
     print(str(Kolvo), ' слитков железа в гидр.прес->сборщик эл.комп.(Нагрев.элементы)')
     print(str(Kolvo * 4), ' слитков олова и ', str(Kolvo), ' в формовщик проводов->сборщик эл.комп.->сборщик эл.схем->сборщик эл.комп.(Нагрев.элементы)')
 if choise == 8 :
-    print(Fore.RED + '1.Бронза;')
+    print(Fore.LIGHTRED_EX + '1.Бронза;')
     print(Fore.WHITE + '2.Сталь;')
-    print(Fore.LIGHTRED_EX + '3.Нерж.сталь;')
+    print(Fore.LIGHTMAGENTA_EX + '3.Нерж.сталь;')
     print(Fore.YELLOW + '4.Электрум;')
     print(Fore.LIGHTBLACK_EX + '5.Вольф.сталь;')
     print(Fore.LIGHTWHITE_EX + '6.Платинин;')
