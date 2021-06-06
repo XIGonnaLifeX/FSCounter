@@ -1,10 +1,11 @@
-print(' _____________')
-print('|###  ###  ###|')
-print('|#   #    #   |')
-print('|##   ##  #   |')
-print('|#      # #   |')
-print('|#   ###   ###|')
-print('~~~~~~~~~~~~~~~')
+from colorama import Fore
+print(Fore.RED + ' _____________')
+print(Fore.RED + '|###  ###  ###|')
+print(Fore.RED + '|#   #    #   |')
+print(Fore.RED + '|##   ##  #   |')
+print(Fore.RED + '|#      # #   |')
+print(Fore.RED + '|#   ###   ###|')
+print(Fore.RED + '~~~~~~~~~~~~~~~')
 print('Привет эта программа поможет посчитать необходимое кол-во слитков на изготовление какого-либо предмета в FS...')
 print('Что изготавливаем?')
 print('1.Двигатели;')
@@ -19,9 +20,6 @@ choise = int(input('~$ '))
 if choise != 8 :
     Kolvo = int(input('Количество: '))
     a = 0
-if choise != (1 and 2 and 3 and 4 and 5 and 6 and 7 and 8) :
-    print('Значение неверно!')
-    print('Program incorrupted. Error: 1492637.1 (Долбаёб)')
 if choise == 1 :
     if int(Kolvo) % 2 !=0 :
         a = a+1
@@ -55,7 +53,7 @@ if choise == 5 :
     print('Итого: ', str(Kolvo*4), ' слитков на провода и ', str(Kolvo), ' слитков на пластины.')
 if choise == 6 :
     Yadra = input('Кол-во ядер: ')
-    print('В формовщик проводов->сборщик эл.компонентов->сборщик эл.схем ', str(Kolvo * 4 * Yadra), ' слитков и ', str(Yadra), ' пластин из вольф.стали');
+    print('В формовщик проводов->сборщик эл.компонентов->сборщик эл.схем ', str(int(Kolvo) * 4 * int(Yadra)), ' слитков и ', str(Yadra), ' пластин из вольф.стали');
     print('В формовщик проводов->сборщик эл.компонентов(Охл.элементы) ', str(Kolvo * Yadra), ' слитков платины.');
     print('В формовщик продов->сборщик эл.комп.->сборщик эл.схем->сборщик эл.комп.(Охл.элемнты) ', str(int(Kolvo) * 4 * int(Yadra)), ' слитков платины и ', str(Yadra), ' пластин из вольф.стали');
     print('В гидр.прес->сборщик эл.комп.(охл.эл) ', str(Yadra), ' слитков золота');
@@ -158,3 +156,4 @@ if choise == 8 :
         SlitokB = b * 1
         print(str(SlitokA) + ' слитков неодима и ' + str(SlitokB) + ' слитков иридия')
         print('Вы получите ' + str(SlitokA + SlitokB) + ' слитков неоридиума')
+input()
