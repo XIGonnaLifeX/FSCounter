@@ -1,13 +1,19 @@
+from colorama.ansi import clear_screen
+clear_screen
 from colorama import Fore
-print(Fore.RED + ' _____________')
-print(Fore.RED + '|###  ###  ###|')
-print(Fore.RED + '|#   #    #   |')
-print(Fore.RED + '|##   ##  #   |')
-print(Fore.RED + '|#      # #   |')
-print(Fore.RED + '|#   ###   ###|')
-print(Fore.RED + '~~~~~~~~~~~~~~~')
+print(Fore.RED)
+print(' _____________')
+print('|###  ###  ###|')
+print('|#   #    #   |')
+print('|##   ##  #   |')
+print('|#      # #   |')
+print('|#   ###   ###|')
+print('~~~~~~~~~~~~~~~')
+print(Fore.WHITE)
 print('Привет эта программа поможет посчитать необходимое кол-во слитков на изготовление какого-либо предмета в FS...')
+print(Fore.LIGHTGREEN_EX)
 print('Что изготавливаем?')
+print(Fore.GREEN)
 print('1.Двигатели;')
 print('2.Манипуляторы;')
 print('3.Турбины;')
@@ -16,6 +22,7 @@ print('5.Микросхемы;')
 print('6.Процессоры;')
 print('7.Нагрев.элементы;')
 print('8.Сплавы...')
+print(Fore.RED)
 choise = int(input('~$ '))
 if choise != 8 :
     Kolvo = int(input('Количество: '))
@@ -23,6 +30,7 @@ if choise != 8 :
 if choise == 1 :
     if int(Kolvo) % 2 !=0 :
         a = a+1
+    print(Fore.YELLOW)
     print('В металлоформовщик (Подшипники): ' + str(Kolvo*3) + ' слитков;')
     print('В металлоформовщик (Стержни): ' + str(int((Kolvo + a) / 2)) + ' слитков;')
     print('В металлоформовщик (Шестерни): '+ str(Kolvo * 2) + ' слитков;')
@@ -34,6 +42,7 @@ if choise == 2 :
     d = Kolvo * 5 / 2
     if Kolvo % 2 != 0 :
         d = ((Kolvo * 5 + 1) / 2)
+    print(Fore.YELLOW)
     print('В сборщик механизмов (Манипуляторы): ', str(Kolvo*3), ' слитков')
     print('В металлофорщик (Стержни): ', str(int(d)) , ' слитков')
     print('В металлофорщик (Подшипники): ', str(Kolvo * 3), ' слитков')
@@ -41,40 +50,47 @@ if choise == 2 :
     print('В формовщик проводов->сборщик эл.компонентов->сборщик микросхем: ', str(Kolvo*4), ' слитков и ', str(Kolvo), ' слитков на пластины')
     print('Итого: ', str(Kolvo * 4 * 2), ' слитков на провода,', str(int(Kolvo*3 + d + Kolvo*3)), ' слитков на остальные части и ', Kolvo, ' слитков на пластины')
 if choise == 3 :
+    print(Fore.YELLOW)
     print(str(Kolvo*6), ' слитков на пластины')
     print(str(Kolvo), ' слитков в металлоформовщик (стержни)')
     print(str(Kolvo*2), ' слитков в металлоформовщик (подшипники)')
     print('Итого: ', str((Kolvo*6)+(Kolvo*2)+Kolvo), ' слитков.')
 if choise == 4 :
+    print(Fore.YELLOW)
     print('В формовщик проводов->сборщик электрокомпонентов ', str(Kolvo*2), ' слитков.')
     print('Итого: ', str(Kolvo*2), ' слитков.')
 if choise == 5 :
+    print(Fore.YELLOW)
     print('В формовщик проводов->сборщик эл.компонентов->сборщик эл.схем ', str(Kolvo*4), ' слитков.')
     print('Итого: ', str(Kolvo*4), ' слитков на провода и ', str(Kolvo), ' слитков на пластины.')
 if choise == 6 :
     Yadra = input('Кол-во ядер: ')
+    print(Fore.YELLOW)
     print('В формовщик проводов->сборщик эл.компонентов->сборщик эл.схем ', str(int(Kolvo) * 4 * int(Yadra)), ' слитков и ', str(Yadra), ' пластин из вольф.стали');
     print('В формовщик проводов->сборщик эл.компонентов(Охл.элементы) ', str(Kolvo * Yadra), ' слитков платины.');
     print('В формовщик продов->сборщик эл.комп.->сборщик эл.схем->сборщик эл.комп.(Охл.элемнты) ', str(int(Kolvo) * 4 * int(Yadra)), ' слитков платины и ', str(Yadra), ' пластин из вольф.стали');
     print('В гидр.прес->сборщик эл.комп.(охл.эл) ', str(Yadra), ' слитков золота');
     print('Итого: ', str(int(Kolvo) * 4 * int(Yadra)), ' слитков на эл.схемы, ', str((int(Kolvo) * 4 * int(Yadra)) + (int(Kolvo) * int(Yadra))), ' слитков платины на охл.элементы и ', str(int(Yadra) * 2), ' слитков вольф.стали на пластины');
 if choise == 7 :
+    print(Fore.YELLOW)
     print(str(Kolvo), ' слитков олова в формовщик проводов->сборщик эл.комп.(Нагрев.элементы)')
     print(str(Kolvo), ' слитков железа в гидр.прес->сборщик эл.комп.(Нагрев.элементы)')
     print(str(Kolvo * 4), ' слитков олова и ', str(Kolvo), ' в формовщик проводов->сборщик эл.комп.->сборщик эл.схем->сборщик эл.комп.(Нагрев.элементы)')
 if choise == 8 :
-    print('1.Бронза;')
-    print('2.Сталь;')
-    print('3.Нерж.сталь;')
-    print('4.Электрум;')
-    print('5.Вольф.сталь;')
-    print('6.Платинин;')
-    print('7.Титан-вольфрам;')
-    print('8.Тантал-титан;')
-    print('9.Осмиридиум;')
-    print('10.Неоридиум.')
+    print(Fore.RED + '1.Бронза;')
+    print(Fore.WHITE + '2.Сталь;')
+    print(Fore.LIGHTRED_EX + '3.Нерж.сталь;')
+    print(Fore.YELLOW + '4.Электрум;')
+    print(Fore.LIGHTBLACK_EX + '5.Вольф.сталь;')
+    print(Fore.LIGHTWHITE_EX + '6.Платинин;')
+    print(Fore.LIGHTMAGENTA_EX + '7.Титан-вольфрам;')
+    print(Fore.MAGENTA + '8.Тантал-титан;')
+    print(Fore.LIGHTBLUE_EX + '9.Осмиридиум;')
+    print(Fore.BLUE + '10.Неоридиум.')
+    print(Fore.RED)
     choiseB = int(input('~$ '))
     Kolvo = int(input('Количество: '))
+    print(Fore.YELLOW)
     if choiseB == 1 :
         while Kolvo % 4 != 0 :
             Kolvo += 1
@@ -156,4 +172,5 @@ if choise == 8 :
         SlitokB = b * 1
         print(str(SlitokA) + ' слитков неодима и ' + str(SlitokB) + ' слитков иридия')
         print('Вы получите ' + str(SlitokA + SlitokB) + ' слитков неоридиума')
+print(Fore.WHITE)
 input()
