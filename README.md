@@ -1,2 +1,2 @@
-# FSCounter-v1.9
+# FSCounter-v1.95
 Counter for Factory Simulator (Andromeda Coders)
