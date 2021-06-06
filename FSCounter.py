@@ -5,8 +5,7 @@ clear_screen
 from colorama import Fore, Back
 print(Fore.RED, Back.LIGHTBLUE_EX)
 os.system("figlet -f smslant 'FSCounter'")
-print('___________________________________________')
-print('--------------------')
+print('__________________________________________')
 print(Fore.WHITE, Back.RESET)
 print('Привет эта программа поможет посчитать необходимое кол-во слитков на изготовление какого-либо предмета в FS...')
 print(Fore.LIGHTGREEN_EX)
