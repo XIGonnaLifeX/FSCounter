@@ -4,7 +4,7 @@ os.system('clear')
 clear_screen
 from colorama import Fore
 print(Fore.RED)
-os.system("toilet 'FSCounter'")
+os.system("figlet 'FSCounter'")
 print('_________________________________________________________________')
 print(Fore.WHITE)
 print('Привет эта программа поможет посчитать необходимое кол-во слитков на изготовление какого-либо предмета в FS...')
