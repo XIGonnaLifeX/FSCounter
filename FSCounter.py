@@ -3,7 +3,7 @@ import os
 os.system('clear')
 clear_screen
 from colorama import Fore, Back
-print(Fore.RED, Back.LIGHTBLUE_EX)
+print(Fore.BLUE, Back.LIGHTRED_EX)
 os.system("figlet -f smslant 'FSCounter'")
 print('__________________________________________' + Back.RESET, Fore.WHITE)
 print('Привет эта программа поможет посчитать необходимое кол-во слитков на изготовление какого-либо предмета в FS...')
