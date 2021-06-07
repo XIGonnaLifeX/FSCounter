@@ -19,8 +19,9 @@ print('6.Процессоры;')
 print('7.Нагрев.элементы;')
 print('8.Сплавы...')
 print(Fore.RED)
+a = 0
 choise = int(input('~$ '))
-if choise != 8 :
+if choise in range(1,7) :
     Kolvo = int(input('Количество: '))
     a = 0
 if choise == 1 :
@@ -102,6 +103,7 @@ if choise == 7 :
     print(str(Kolvo), ' слитков железа в гидр.прес->сборщик эл.комп.(Нагрев.элементы)')
     print(str(Kolvo * 4), ' слитков олова и ', str(Kolvo), ' в формовщик проводов->сборщик эл.комп.->сборщик эл.схем->сборщик эл.комп.(Нагрев.элементы)')
 if choise == 8 :
+    m = 1
     print(Fore.LIGHTRED_EX + '1.Бронза;')
     print(Fore.WHITE + '2.Сталь;')
     print(Fore.LIGHTMAGENTA_EX + '3.Нерж.сталь;')
@@ -114,7 +116,8 @@ if choise == 8 :
     print(Fore.BLUE + '10.Неоридиум.')
     print(Fore.RED)
     choiseB = int(input('~$ '))
-    Kolvo = int(input('Количество: '))
+    if choiseB in range(1, 10) :
+        Kolvo = int(input('Количество: '))
     print(Fore.YELLOW)
     if choiseB == 1 :
         while Kolvo % 4 != 0 :
@@ -198,4 +201,8 @@ if choise == 8 :
         print(str(SlitokA) + ' слитков неодима и ' + str(SlitokB) + ' слитков иридия')
         print('Вы получите ' + str(SlitokA + SlitokB) + ' слитков неоридиума')
 print(Fore.WHITE)
-input()
+if choise not in range(1, 8) :
+    print(Fore.BLACK + Back.RED + 'Program incorupted, reason: 82736266(Долбоёб)')
+if a == 1 :
+    if choiseB not in range(1, 10):
+        print(Fore.BLACK + Back.RED + 'Program incorupted, reason: 82736266(Долбоёб)')
