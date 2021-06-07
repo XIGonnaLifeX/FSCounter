@@ -104,6 +104,7 @@ if choise == 7 :
     print(str(Kolvo * 4), ' слитков олова и ', str(Kolvo), ' в формовщик проводов->сборщик эл.комп.->сборщик эл.схем->сборщик эл.комп.(Нагрев.элементы)')
 if choise == 8 :
     m = 1
+    print()
     print(Fore.LIGHTRED_EX + '1.Бронза;')
     print(Fore.WHITE + '2.Сталь;')
     print(Fore.LIGHTMAGENTA_EX + '3.Нерж.сталь;')
