@@ -209,5 +209,5 @@ if choise == 8 :
         print('Вы получите ' + str(SlitokA + SlitokB) + ' слитков неоридиума')
 print(Fore.WHITE)
 yn = str(input('Перезапумтить программу?(y/n): '))
-if yn == 'y' :
+if yn == 'y' or 'Y' :
     os.system('python FSCounter.py')
