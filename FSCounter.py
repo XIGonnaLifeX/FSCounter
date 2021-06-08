@@ -21,6 +21,9 @@ print('8.Сплавы...')
 print(Fore.RED)
 l = 0
 choise = int(input('~$ '))
+if choise not in range(1, 9) :
+    print(Fore.BLACK + Back.RED + 'Program incorupted, reason: 82736266(Долбоёб)')
+    print(Fore.RESET, Back.RESET)
 if choise in range(1,7) :
     Kolvo = int(input('Количество: '))
     a = 0
@@ -117,8 +120,11 @@ if choise == 8 :
     print(Fore.BLUE + '10.Неоридиум.')
     print(Fore.RED)
     choiseB = int(input('~$ '))
-    if choiseB in range(1, 10) :
+    if choiseB in range(1, 11) :
         Kolvo = int(input('Количество: '))
+    else :
+        print(Fore.BLACK + Back.RED + 'Program incorupted, reason: 82736266(Долбоёб)')
+        print(Back.RESET, Fore.RESET)
     print(Fore.YELLOW)
     if choiseB == 1 :
         while Kolvo % 4 != 0 :
@@ -202,11 +208,6 @@ if choise == 8 :
         print(str(SlitokA) + ' слитков неодима и ' + str(SlitokB) + ' слитков иридия')
         print('Вы получите ' + str(SlitokA + SlitokB) + ' слитков неоридиума')
 print(Fore.WHITE)
-if choise not in range(1, 8) :
-    print(Fore.BLACK + Back.RED + 'Program incorupted, reason: 82736266(Долбоёб)')
-if l == 1 :
-    if choiseB not in range(1, 10):
-        print(Fore.BLACK + Back.RED + 'Program incorupted, reason: 82736266(Долбоёб)')
-yn = str(input('Перезапумтить программу?(y/n)'))
+yn = str(input('Перезапумтить программу?(y/n): '))
 if yn == 'y' :
     os.system('python FSCounter.py')
