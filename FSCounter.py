@@ -90,7 +90,7 @@ if choise == 5 :
     print('                                      ')
     print('    #'+str(Kolvo)+'UC'+str(Kolvo*4)    )
 if choise == 6 :
-    Yadra = input('Кол-во ядер: ')
+    Yadra = int(input('Кол-во ядер: '))
     print(Fore.YELLOW)
     print('В формовщик проводов->сборщик эл.компонентов->сборщик эл.схем ', str(int(Kolvo) * 4 * int(Yadra)), ' слитков и ', str(Yadra), ' пластин из вольф.стали');
     print('В формовщик проводов->сборщик эл.компонентов(Охл.элементы) ', str(Kolvo * Yadra), ' слитков платины.');
