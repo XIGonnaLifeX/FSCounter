@@ -207,3 +207,6 @@ if choise not in range(1, 8) :
 if a == 1 :
     if choiseB not in range(1, 10):
         print(Fore.BLACK + Back.RED + 'Program incorupted, reason: 82736266(Долбоёб)')
+yn = str(input('Перезапумтить программу?(y/n)'))
+if yn is 'y' :
+    os.system('python FSCounter.py')
